@@ -1,12 +1,12 @@
 console.log("Hello World!");
 
 function getComputerChoice() {
-    randomNumber = Math.floor(Math.random() * 8);
+    randomNumber = Math.floor(Math.random() * 3);
     
-    if (randomNumber >= 7) {
+    if (randomNumber == 2) {
         return "rock";
     }
-    else if (randomNumber >= 4) {
+    else if (randomNumber == 1) {
         return "paper";
     }
     else {
@@ -39,7 +39,11 @@ function playRound (playerSelection, computerSelection)
         else console.log("You win! scissors beats paper");
     }
 
+    else console.log("Please enter a valid option: rock, paper or scissors")
 
 }
 
-playRound("Rock", getComputerChoice());
+for (let i = 0; i < 5; i++)
+{
+    playRound(prompt(), getComputerChoice());
+}
